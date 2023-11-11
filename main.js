@@ -96,3 +96,19 @@ const serializeBoard = (board, name) => {
 
 
 //////
+
+
+addComponent(currentBoard, 'INPUT');
+addComponent(currentBoard, 'INPUT');
+addComponent(currentBoard, 'NAND');
+addComponent(currentBoard, 'OR');
+addComponent(currentBoard, 'AND');
+addComponent(currentBoard, 'OUTPUT');
+
+connectComponents(currentBoard, '0:a', '2:a');
+connectComponents(currentBoard, '1:a', '2:b');
+connectComponents(currentBoard, '0:a', '3:0/a');
+connectComponents(currentBoard, '1:a', '3:1/a');
+connectComponents(currentBoard, '2:(ab)\'', '4:0/a');
+connectComponents(currentBoard, '3:5/a', '4:1/a');
+connectComponents(currentBoard, '4:4/a', '5:a');
