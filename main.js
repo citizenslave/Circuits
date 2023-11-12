@@ -99,64 +99,65 @@ const DigitalLogicJS = {
 
 //////
 
-addComponent(currentBoard, 'INPUT');
-addComponent(currentBoard, 'NAND');
-addComponent(currentBoard, 'OUTPUT');
+console.log('Access "DigitalLogicJS" to begin!');
+// addComponent(currentBoard, 'INPUT');
+// addComponent(currentBoard, 'NAND');
+// addComponent(currentBoard, 'OUTPUT');
 
-connectComponents(currentBoard, '0:a', '1:a');
-connectComponents(currentBoard, '0:a', '1:b');
-connectComponents(currentBoard, '1:(ab)\'', '2:a');
+// connectComponents(currentBoard, '0:a', '1:a');
+// connectComponents(currentBoard, '0:a', '1:b');
+// connectComponents(currentBoard, '1:(ab)\'', '2:a');
 
-serializeBoard(currentBoard, 'NOT');
-clearBoard(currentBoard);
-
-
-
-addComponent(currentBoard, 'INPUT');
-addComponent(currentBoard, 'INPUT');
-addComponent(currentBoard, 'NAND');
-addComponent(currentBoard, 'NOT');
-addComponent(currentBoard, 'OUTPUT');
-
-connectComponents(currentBoard, '0:a', '2:a');
-connectComponents(currentBoard, '1:a', '2:b');
-connectComponents(currentBoard, '2:(ab)\'', '3:0/a');
-connectComponents(currentBoard, '3:2/a', '4:a');
-
-serializeBoard(currentBoard, 'AND');
-clearBoard(currentBoard);
+// serializeBoard(currentBoard, 'NOT');
+// clearBoard(currentBoard);
 
 
 
-addComponent(currentBoard, 'INPUT');
-addComponent(currentBoard, 'INPUT');
-addComponent(currentBoard, 'NOT');
-addComponent(currentBoard, 'NOT');
-addComponent(currentBoard, 'NAND');
-addComponent(currentBoard, 'OUTPUT');
+// addComponent(currentBoard, 'INPUT');
+// addComponent(currentBoard, 'INPUT');
+// addComponent(currentBoard, 'NAND');
+// addComponent(currentBoard, 'NOT');
+// addComponent(currentBoard, 'OUTPUT');
 
-connectComponents(currentBoard, '0:a', '2:0/a');
-connectComponents(currentBoard, '1:a', '3:0/a');
-connectComponents(currentBoard, '2:2/a', '4:a');
-connectComponents(currentBoard, '3:2/a', '4:b');
-connectComponents(currentBoard, '4:(ab)\'', '5:a');
+// connectComponents(currentBoard, '0:a', '2:a');
+// connectComponents(currentBoard, '1:a', '2:b');
+// connectComponents(currentBoard, '2:(ab)\'', '3:0/a');
+// connectComponents(currentBoard, '3:2/a', '4:a');
 
-serializeBoard(currentBoard, 'OR');
-clearBoard(currentBoard);
+// serializeBoard(currentBoard, 'AND');
+// clearBoard(currentBoard);
 
 
 
-addComponent(currentBoard, 'INPUT');
-addComponent(currentBoard, 'INPUT');
-addComponent(currentBoard, 'NAND');
-addComponent(currentBoard, 'OR');
-addComponent(currentBoard, 'AND');
-addComponent(currentBoard, 'OUTPUT');
+// addComponent(currentBoard, 'INPUT');
+// addComponent(currentBoard, 'INPUT');
+// addComponent(currentBoard, 'NOT');
+// addComponent(currentBoard, 'NOT');
+// addComponent(currentBoard, 'NAND');
+// addComponent(currentBoard, 'OUTPUT');
 
-connectComponents(currentBoard, '0:a', '2:a');
-connectComponents(currentBoard, '1:a', '2:b');
-connectComponents(currentBoard, '0:a', '3:0/a');
-connectComponents(currentBoard, '1:a', '3:1/a');
-connectComponents(currentBoard, '2:(ab)\'', '4:0/a');
-connectComponents(currentBoard, '3:5/a', '4:1/a');
-connectComponents(currentBoard, '4:4/a', '5:a');
+// connectComponents(currentBoard, '0:a', '2:0/a');
+// connectComponents(currentBoard, '1:a', '3:0/a');
+// connectComponents(currentBoard, '2:2/a', '4:a');
+// connectComponents(currentBoard, '3:2/a', '4:b');
+// connectComponents(currentBoard, '4:(ab)\'', '5:a');
+
+// serializeBoard(currentBoard, 'OR');
+// clearBoard(currentBoard);
+
+
+
+// addComponent(currentBoard, 'INPUT');
+// addComponent(currentBoard, 'INPUT');
+// addComponent(currentBoard, 'NAND');
+// addComponent(currentBoard, 'OR');
+// addComponent(currentBoard, 'AND');
+// addComponent(currentBoard, 'OUTPUT');
+
+// connectComponents(currentBoard, '0:a', '2:a');
+// connectComponents(currentBoard, '1:a', '2:b');
+// connectComponents(currentBoard, '0:a', '3:0/a');
+// connectComponents(currentBoard, '1:a', '3:1/a');
+// connectComponents(currentBoard, '2:(ab)\'', '4:0/a');
+// connectComponents(currentBoard, '3:5/a', '4:1/a');
+// connectComponents(currentBoard, '4:4/a', '5:a');
