@@ -95,7 +95,6 @@ console.log('Access "DigitalLogicJS" to begin!');
 
 
 
-// SR Latch (NAND Gates Only)
 // DigitalLogicJS.addComponent(DigitalLogicJS.currentBoard, 'INPUT');  // 0
 // DigitalLogicJS.addComponent(DigitalLogicJS.currentBoard, 'INPUT');  // 1
 // DigitalLogicJS.addComponent(DigitalLogicJS.currentBoard, 'NAND');   // 2
@@ -228,159 +227,33 @@ console.log('Access "DigitalLogicJS" to begin!');
 
 
 
-// const libText = `[{
-//   "id":"NOT",
-//   "boardList":[{
-//     "id":0,
-//     "type":"INPUT",
-//     "inputMap":{},
-//     "outputs":[{"id":"a","o":"INPUT"}],
-//     "boardList":null
-//   },{
-//     "id":1,
-//     "type":"NAND",
-//     "inputMap":{"a":"0:a","b":"0:a"},
-//     "outputs":[{"id":"(ab)'","o":"NAND"}],
-//     "boardList":null
-//   },{
-//     "id":2,
-//     "type":"OUTPUT",
-//     "inputMap":{"a":"1:(ab)'"},
-//     "outputs":[{"id":"a","o":"OUTPUT"}],
-//     "boardList":null
-//   }],
-//   "inputs":["0/a"],
-//   "outputs":[{"id":"2/a","o":"2:a"}]
-// },{
-//   "id":"AND",
-//   "boardList":[{
-//     "id":0,
-//     "type":"INPUT",
-//     "inputMap":{},
-//     "outputs":[{"id":"a","o":"INPUT"}],
-//     "boardList":null
-//   },{
-//     "id":1,
-//     "type":"INPUT",
-//     "inputMap":{},
-//     "outputs":[{"id":"a","o":"INPUT"}],
-//     "boardList":null
-//   },{
-//     "id":2,
-//     "type":"NAND",
-//     "inputMap":{"a":"0:a","b":"1:a"},
-//     "outputs":[{"id":"(ab)'","o":"NAND"}],
-//     "boardList":null
-//   },{
-//     "id":3,
-//     "type":"NOT",
-//     "inputMap":{"0/a":"2:(ab)'"},
-//     "outputs":[{"id":"2/a","o":"2:a"}],
-//     "boardList":[{
-//       "id":0,
-//       "type":"INPUT",
-//       "inputMap":{},
-//       "outputs":[{"id":"a","o":"INPUT"}],
-//       "boardList":null
-//     },{
-//       "id":1,
-//       "type":"NAND",
-//       "inputMap":{"a":"0:a","b":"0:a"},
-//       "outputs":[{"id":"(ab)'","o":"NAND"}],
-//       "boardList":null
-//     },{
-//       "id":2,
-//       "type":"OUTPUT",
-//       "inputMap":{"a":"1:(ab)'"},
-//       "outputs":[{"id":"a","o":"OUTPUT"}],
-//       "boardList":null
-//     }]
-//   },{
-//     "id":4,
-//     "type":"OUTPUT",
-//     "inputMap":{"a":"3:2/a"},
-//     "outputs":[{"id":"a","o":"OUTPUT"}],
-//     "boardList":null
-//   }],
-//   "inputs":["0/a","1/a"],
-//   "outputs":[{"id":"4/a","o":"4:a"}]
-// },{
-//   "id":"OR",
-//   "boardList":[{
-//     "id":0,
-//     "type":"INPUT",
-//     "inputMap":{},
-//     "outputs":[{"id":"a","o":"INPUT"}],
-//     "boardList":null
-//   },{
-//     "id":1,
-//     "type":"INPUT",
-//     "inputMap":{},
-//     "outputs":[{"id":"a","o":"INPUT"}],
-//     "boardList":null
-//   },{
-//     "id":2,
-//     "type":"NOT",
-//     "inputMap":{"0/a":"0:a"},
-//     "outputs":[{"id":"2/a","o":"2:a"}],
-//     "boardList":[{
-//       "id":0,
-//       "type":"INPUT",
-//       "inputMap":{},
-//       "outputs":[{"id":"a","o":"INPUT"}],
-//       "boardList":null
-//     },{
-//       "id":1,
-//       "type":"NAND",
-//       "inputMap":{"a":"0:a","b":"0:a"},
-//       "outputs":[{"id":"(ab)'","o":"NAND"}],
-//       "boardList":null
-//     },{
-//       "id":2,
-//       "type":"OUTPUT",
-//       "inputMap":{"a":"1:(ab)'"},
-//       "outputs":[{"id":"a","o":"OUTPUT"}],
-//       "boardList":null
-//     }]
-//   },{
-//     "id":3,
-//     "type":"NOT",
-//     "inputMap":{"0/a":"1:a"},
-//     "outputs":[{"id":"2/a","o":"2:a"}],
-//     "boardList":[{
-//       "id":0,
-//       "type":"INPUT",
-//       "inputMap":{},
-//       "outputs":[{"id":"a","o":"INPUT"}],
-//       "boardList":null
-//     },{
-//       "id":1,
-//       "type":"NAND",
-//       "inputMap":{"a":"0:a","b":"0:a"},
-//       "outputs":[{"id":"(ab)'","o":"NAND"}],
-//       "boardList":null
-//     },{
-//       "id":2,
-//       "type":"OUTPUT",
-//       "inputMap":{"a":"1:(ab)'"},
-//       "outputs":[{"id":"a","o":"OUTPUT"}],
-//       "boardList":null
-//     }]
-//   },{
-//     "id":4,
-//     "type":"NAND",
-//     "inputMap":{"a":"2:2/a","b":"3:2/a"},
-//     "outputs":[{"id":"(ab)'","o":"NAND"}],
-//     "boardList":null
-//   },{
-//     "id":5,
-//     "type":"OUTPUT",
-//     "inputMap":{"a":"4:(ab)'"},
-//     "outputs":[{"id":"a","o":"OUTPUT"}],
-//     "boardList":null
-//   }],
-//   "inputs":["0/a","1/a"],
-//   "outputs":[{"id":"5/a","o":"5:a"}]
-// }]`;
-
-// DigitalLogicJS.componentLibrary = [ ...DigitalLogicJS.componentLibrary, ...JSON.parse(DigitalLogicJS.libText) ];
+// const memTest = [
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': true }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': true, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': true, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': true, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': true, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': true, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': true }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': true, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': true }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': true, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': true }, DigitalLogicJS.currentBoard)[0][0],
+//   DigitalLogicJS.readBoard({ '0:a': false, '1:a': false }, DigitalLogicJS.currentBoard)[0][0],
+// ];
+// console.log(memTest.map(i => i.value));
